@@ -74,8 +74,3 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}/icons
 
 /etc/X11/applnk/DockApplets/wmmount.desktop
-
-%changelog
-* Tue May 25 1999 Piotr Czerwiñski <pius@pld.org.pl> 
-  [1.0-1]
-- initial RPM release.
