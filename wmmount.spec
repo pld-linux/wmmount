@@ -53,8 +53,6 @@ install system.wmmount.awk $RPM_BUILD_ROOT%{_datadir}/%{name}
 install system.wmmount $RPM_BUILD_ROOT%{_datadir}/%{name}
 #install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
-gzip -9nf README
-
 %post
 cd %{_datadir}/%{name}
 ./system.wmmount.awk > system.wmmount
@@ -64,7 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz system.wmmount.eg home.wmmount.eg
+%doc README system.wmmount.eg home.wmmount.eg
 %attr(755,root,root) %{_bindir}/%{name}
 
 %dir %{_datadir}/%{name}
