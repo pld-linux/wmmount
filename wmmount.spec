@@ -10,6 +10,7 @@ Source0:	http://www.geocities.com/SiliconValley/Vista/2471/%{name}.tgz
 Source1:	%{name}.desktop
 Patch0:		%{name}-conf.patch
 Patch1:		%{name}-ComplexProgramTargetNoMan.patch
+Patch2:		%{name}-g++.patch
 BuildRequires:	XFree86-devel
 Requires(post):	/bin/awk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,6 +31,7 @@ na ikonê napêdu.
 %setup -q -n %{name}
 %patch0 -p0
 %patch1 -p1
+%patch2 -p1
 
 %build
 xmkmf
@@ -44,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}/icons} \
 	$RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+install %{name} $RPM_BUILD_ROOT%{_bindir}
 
 install EXTRAS/* $RPM_BUILD_ROOT%{_datadir}/%{name}/icons
 install system.wmmount.awk $RPM_BUILD_ROOT%{_datadir}/%{name}
