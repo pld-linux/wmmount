@@ -6,7 +6,7 @@ Release:	1
 Copyright:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source:		%{name}.tgz
+Source:		http://www.geocities.com/SiliconValley/Vista/2471/%{name}.tgz
 Patch:		wmmount-conf.patch
 BuildPrereq:	XFree86-devel
 BuildPrereq:	xpm-devel
