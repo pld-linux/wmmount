@@ -69,4 +69,4 @@ cd %{_datadir}/%{name}
 
 %{_datadir}/%{name}/icons
 
-#%{_applnkdir}/DockApplets/wmmount.desktop
+#%%{_applnkdir}/DockApplets/wmmount.desktop
