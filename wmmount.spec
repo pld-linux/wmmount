@@ -13,7 +13,6 @@ BuildRequires:	XFree86-devel
 Prereq:		/bin/awk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define 	_prefix		/usr/X11R6
 
 %description
 This is a little application that sits in your WindowMaker's Dock and
