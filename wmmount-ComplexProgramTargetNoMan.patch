@@ -1,0 +1,8 @@
+--- ./Imakefile.org	Sat Sep  5 17:11:18 1998
++++ ./Imakefile	Wed Nov 28 01:07:03 2001
+@@ -4,4 +4,4 @@
+ SRCS = wmmount.cc
+ OBJS = wmmount.o
+ 
+-ComplexProgramTarget(wmmount)
++ComplexProgramTargetNoMan(wmmount)
