@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=wmmount
+Name=WmMount
 Comment=Mounts and unmounts file systems
 Comment[pl]=Montuje i odmontowuje systemy plików
 Exec=wmmount -w -s
