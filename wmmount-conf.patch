@@ -5,7 +5,7 @@
  
  // User defines - custom
 -#define SYSRCFILE   "/usr/X11R6/lib/X11/wmmount/system.wmmount"
-+#define SYSRCFILE   "/usr/X11R6/share/wmmount/system.wmmount"
++#define SYSRCFILE   "/usr/share/wmmount/system.wmmount"
  #define MOUNTCMD    "mount %s &"
  #define UMOUNTCMD   "umount %s &"
  #define OPENCMD     "xterm -e mc %s &"
@@ -19,10 +19,10 @@
 -icon /usr/X11R6/lib/X11/wmmount/floppy.xpm
 -icon /usr/X11R6/lib/X11/wmmount/zip.xpm
 -icon /usr/X11R6/lib/X11/wmmount/harddisk.xpm
-+icon /usr/X11R6/share/wmmount/icons/cdrom.xpm
-+icon /usr/X11R6/share/wmmount/icons/floppy.xpm
-+icon /usr/X11R6/share/wmmount/icons/zip.xpm
-+icon /usr/X11R6/share/wmmount/icons/harddisk.xpm
++icon /usr/share/wmmount/icons/cdrom.xpm
++icon /usr/share/wmmount/icons/floppy.xpm
++icon /usr/share/wmmount/icons/zip.xpm
++icon /usr/share/wmmount/icons/harddisk.xpm
  
  # Now give details of each mountpoint.
  # Each mountpoint requires 4 *consecutive* lines.
