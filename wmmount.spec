@@ -2,7 +2,7 @@ Summary:	Mounts and unmounts file systems
 Summary(pl):	Montuje i odmontowuje systemy plików
 Name:		wmmount
 Version:	1.0
-Release:	4
+Release:	5
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.geocities.com/SiliconValley/Vista/2471/%{name}.tgz
@@ -44,14 +44,14 @@ touch system.wmmount
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}/icons} \
-	$RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+	$RPM_BUILD_ROOT%{_desktopdir}/docklets
 
 install %{name} $RPM_BUILD_ROOT%{_bindir}
 
 install EXTRAS/* $RPM_BUILD_ROOT%{_datadir}/%{name}/icons
 install system.wmmount.awk $RPM_BUILD_ROOT%{_datadir}/%{name}
 install system.wmmount $RPM_BUILD_ROOT%{_datadir}/%{name}
-#install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT%{_desktopdir}/docklets
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -71,5 +71,4 @@ cd %{_datadir}/%{name}
 %config %verify(not size mtime md5) %{_datadir}/%{name}/system.wmmount
 
 %{_datadir}/%{name}/icons
-
-#%%{_applnkdir}/DockApplets/wmmount.desktop
+%{_desktopdir}/docklets/wmmount.desktop
