@@ -9,8 +9,8 @@ Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://www.geocities.com/SiliconValley/Vista/2471/%{name}.tgz
 Source1:	wmmount.desktop
 Patch:		wmmount-conf.patch
-BuildPrereq:	XFree86-devel
-BuildPrereq:	xpm-devel
+BuildRequires:	XFree86-devel
+BuildRequires:	xpm-devel
 Prereq:		/bin/awk
 BuildRoot:	/tmp/%{name}-%{version}-root
 
