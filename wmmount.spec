@@ -3,7 +3,7 @@ Summary(pl):	Montuje i odmontowuje systemy plików
 Name:		wmmount
 Version: 	1.0
 Release:	2
-Copyright:	GPL
+License:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://www.geocities.com/SiliconValley/Vista/2471/%{name}.tgz
@@ -61,7 +61,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.gz system.wmmount.eg home.wmmount.eg
+%doc *.gz system.wmmount.eg home.wmmount.eg
 %attr(755,root,root) %{_bindir}/%{name}
 
 %dir %{_datadir}/%{name}
