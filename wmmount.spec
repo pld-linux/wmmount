@@ -12,10 +12,9 @@ Patch:		wmmount-conf.patch
 BuildRequires:	XFree86-devel
 BuildRequires:	xpm-devel
 Prereq:		/bin/awk
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define 	_prefix		/usr/X11R6
-%define		_applnkdir	%{_datadir}/applnk
 
 %description
 This is a little application that sits in your WindowMaker's Dock 
