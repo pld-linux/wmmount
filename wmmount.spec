@@ -2,11 +2,12 @@ Summary:	Mounts and unmounts file systems
 Summary(pl):	Montuje i odmontowuje systemy plików
 Name:		wmmount
 Version: 	1.0
-Release:	1
+Release:	2
 Copyright:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
-Source:		http://www.geocities.com/SiliconValley/Vista/2471/%{name}.tgz
+Source0:	http://www.geocities.com/SiliconValley/Vista/2471/%{name}.tgz
+Source1:	wmmount.desktop
 Patch:		wmmount-conf.patch
 BuildPrereq:	XFree86-devel
 BuildPrereq:	xpm-devel
@@ -41,13 +42,15 @@ touch system.wmmount
 %install
 rm -rf $RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}/icons} 
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}/icons} \
+	$RPM_BUILD_ROOT/etc/X11/applnk/DockApplets
 
 make install DESTDIR=$RPM_BUILD_ROOT
 
 install EXTRAS/* $RPM_BUILD_ROOT%{_datadir}/%{name}/icons
 install system.wmmount.awk $RPM_BUILD_ROOT%{_datadir}/%{name}
 install system.wmmount $RPM_BUILD_ROOT%{_datadir}/%{name}
+install %{SOURCE1} $RPM_BUILD_ROOT/etc/X11/applnk/DockApplets
 
 gzip -9nf README
 
@@ -69,6 +72,8 @@ rm -rf $RPM_BUILD_ROOT
 %config %{_datadir}/%{name}/system.wmmount
 
 %{_datadir}/%{name}/icons
+
+/etc/X11/applnk/DockApplets/wmmount.desktop
 
 %changelog
 * Tue May 25 1999 Piotr Czerwiñski <pius@pld.org.pl> 
