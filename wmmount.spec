@@ -35,7 +35,6 @@ na ikonê napêdu.
 
 xmkmf
 %{__make}
-strip %{name}
 touch system.wmmount
 
 %install
