@@ -48,7 +48,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}/icons} \
 install EXTRAS/* $RPM_BUILD_ROOT%{_datadir}/%{name}/icons
 install system.wmmount.awk $RPM_BUILD_ROOT%{_datadir}/%{name}
 install system.wmmount $RPM_BUILD_ROOT%{_datadir}/%{name}
-install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
+#install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 gzip -9nf README
 
@@ -65,10 +65,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/%{name}
 
 %dir %{_datadir}/%{name}
-
 %attr(755,root,root) %{_datadir}/%{name}/system.wmmount.awk
 %config %{_datadir}/%{name}/system.wmmount
 
 %{_datadir}/%{name}/icons
 
-%{_applnkdir}/DockApplets/wmmount.desktop
+#%{_applnkdir}/DockApplets/wmmount.desktop
