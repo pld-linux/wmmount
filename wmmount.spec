@@ -5,8 +5,6 @@ Version:	1.0
 Release:	4
 License:	GPL
 Group:		X11/Window Managers/Tools
-Group(de):	X11/Fenstermanager/Werkzeuge
-Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://www.geocities.com/SiliconValley/Vista/2471/%{name}.tgz
 Source1:	%{name}.desktop
 Patch0:		%{name}-conf.patch
