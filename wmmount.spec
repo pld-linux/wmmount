@@ -14,7 +14,7 @@ BuildRequires:	xpm-devel
 Prereq:		/bin/awk
 BuildRoot:	/tmp/%{name}-%{version}-root
 
-%define _prefix	/usr/X11R6
+%define 	_prefix		/usr/X11R6
 
 %description
 This is a little application that sits in your WindowMaker's Dock 
