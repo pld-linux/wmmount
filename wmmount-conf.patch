@@ -1,0 +1,28 @@
+--- wmmount.cc~	Sat Sep  5 17:11:18 1998
++++ wmmount.cc	Tue May 25 12:21:36 1999
+@@ -20,7 +20,7 @@
+ #define CLASS       "WMMount"
+ 
+ // User defines - custom
+-#define SYSRCFILE   "/usr/X11R6/lib/X11/wmmount/system.wmmount"
++#define SYSRCFILE   "/usr/X11R6/share/wmmount/system.wmmount"
+ #define MOUNTCMD    "mount %s &"
+ #define UMOUNTCMD   "umount %s &"
+ #define OPENCMD     "xterm -e mc %s &"
+--- system.wmmount.awk~	Sat Sep  5 17:11:18 1998
++++ system.wmmount.awk	Tue May 25 12:24:41 1999
+@@ -66,10 +66,10 @@
+ # At least one icon must be specified!
+ # References to non-existent files will cause crashes.
+ 
+-icon /usr/X11R6/lib/X11/wmmount/cdrom.xpm
+-icon /usr/X11R6/lib/X11/wmmount/floppy.xpm
+-icon /usr/X11R6/lib/X11/wmmount/zip.xpm
+-icon /usr/X11R6/lib/X11/wmmount/harddisk.xpm
++icon /usr/X11R6/share/wmmount/icons/cdrom.xpm
++icon /usr/X11R6/share/wmmount/icons/floppy.xpm
++icon /usr/X11R6/share/wmmount/icons/zip.xpm
++icon /usr/X11R6/share/wmmount/icons/harddisk.xpm
+ 
+ # Now give details of each mountpoint.
+ # Each mountpoint requires 4 *consecutive* lines.
