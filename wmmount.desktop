@@ -1,7 +1,8 @@
 [Desktop Entry]
 Name=wmmount
 Comment=Mounts and unmounts file systems
-Comment[pl]=Montuje i odmontowuje systemy plików
+Comment[pl]=Montuje i odmontowuje systemy plikÃ³w
 Exec=wmmount -w -s
 Terminal=0
 Type=Application
+# vi: encoding=utf-8
