@@ -6,6 +6,7 @@ Release:	4
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.geocities.com/SiliconValley/Vista/2471/%{name}.tgz
+# Source0-md5:	f77926476c52cda5e52deb731784341a
 Source1:	%{name}.desktop
 Patch0:		%{name}-conf.patch
 Patch1:		%{name}-ComplexProgramTargetNoMan.patch
