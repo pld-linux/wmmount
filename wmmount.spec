@@ -10,9 +10,8 @@ Source1:	%{name}.desktop
 Patch0:		%{name}-conf.patch
 Patch1:		%{name}-ComplexProgramTargetNoMan.patch
 BuildRequires:	XFree86-devel
-Prereq:		/bin/awk
+Requires(post):	/bin/awk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
 
 %description
 This is a little application that sits in your WindowMaker's Dock and
@@ -32,7 +31,6 @@ na ikonê napêdu.
 %patch1 -p1
 
 %build
-
 xmkmf
 %{__make} \
 	CXXDEBUGFLAGS="%{rpmcflags}" \
@@ -52,12 +50,13 @@ install system.wmmount.awk $RPM_BUILD_ROOT%{_datadir}/%{name}
 install system.wmmount $RPM_BUILD_ROOT%{_datadir}/%{name}
 #install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
-%post
-cd %{_datadir}/%{name}
-./system.wmmount.awk > system.wmmount
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+umask 022
+cd %{_datadir}/%{name}
+./system.wmmount.awk > system.wmmount
 
 %files
 %defattr(644,root,root,755)
@@ -66,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %dir %{_datadir}/%{name}
 %attr(755,root,root) %{_datadir}/%{name}/system.wmmount.awk
-%config %{_datadir}/%{name}/system.wmmount
+%config %verify(not size mtime md5) %{_datadir}/%{name}/system.wmmount
 
 %{_datadir}/%{name}/icons
 
