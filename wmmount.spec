@@ -1,10 +1,11 @@
 Summary:	Mounts and unmounts file systems
 Summary(pl):	Montuje i odmontowuje systemy plików
 Name:		wmmount
-Version: 	1.0
-Release:	3
+Version:	1.0
+Release:	4
 License:	GPL
 Group:		X11/Window Managers/Tools
+Group(de):	X11/Fenstermanager/Werkzeuge
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://www.geocities.com/SiliconValley/Vista/2471/%{name}.tgz
 Source1:	%{name}.desktop
@@ -17,15 +18,15 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define 	_prefix		/usr/X11R6
 
 %description
-This is a little application that sits in your WindowMaker's Dock 
-and allows you to automatically mount (and unmount) pre-defined mount 
-points and launch your favorite (pre-defined) file manager when you 
-double click on the drive icon. 
+This is a little application that sits in your WindowMaker's Dock and
+allows you to automatically mount (and unmount) pre-defined mount
+points and launch your favorite (pre-defined) file manager when you
+double click on the drive icon.
 
 %description -l pl
 Dokowalna aplikacja dla WindowMakera, która pozwala na automatyczne
 montowanie (i odmontowywanie) zdefiniowanych punktów montowania oraz
-na uruchomienie ulubionego zarz±dcy plików przez dwukrotne klikniêcie 
+na uruchomienie ulubionego zarz±dcy plików przez dwukrotne klikniêcie
 na ikonê napêdu.
 
 %prep
