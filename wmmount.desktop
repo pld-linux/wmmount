@@ -2,6 +2,6 @@
 Name=wmmount
 Comment=Mounts and unmounts file systems
 Comment[pl]=Montuje i odmontowuje systemy plików
-Exec=wmmount
+Exec=wmmount -w -s
 Terminal=0
 Type=Application
