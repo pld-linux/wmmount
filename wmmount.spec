@@ -15,6 +15,7 @@ Prereq:		/bin/awk
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %define 	_prefix		/usr/X11R6
+%define		_applnkdir	%{_datadir}/applnk
 
 %description
 This is a little application that sits in your WindowMaker's Dock 
@@ -43,14 +44,14 @@ touch system.wmmount
 rm -rf $RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_datadir}/%{name}/icons} \
-	$RPM_BUILD_ROOT/usr/X11R6/share/applnk/DockApplets
+	$RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 make install DESTDIR=$RPM_BUILD_ROOT
 
 install EXTRAS/* $RPM_BUILD_ROOT%{_datadir}/%{name}/icons
 install system.wmmount.awk $RPM_BUILD_ROOT%{_datadir}/%{name}
 install system.wmmount $RPM_BUILD_ROOT%{_datadir}/%{name}
-install %{SOURCE1} $RPM_BUILD_ROOT/usr/X11R6/share/applnk/DockApplets
+install %{SOURCE1} $RPM_BUILD_ROOT%{_applnkdir}/DockApplets
 
 gzip -9nf README
 
@@ -73,4 +74,4 @@ rm -rf $RPM_BUILD_ROOT
 
 %{_datadir}/%{name}/icons
 
-/usr/X11R6/share/applnk/DockApplets/wmmount.desktop
+%{_applnkdir}/DockApplets/wmmount.desktop
