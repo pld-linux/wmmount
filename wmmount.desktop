@@ -5,5 +5,7 @@ Comment[pl]=Montuje i odmontowuje systemy plików
 Exec=wmmount -w -s
 Terminal=false
 Type=Application
+Categories=Applet;
+NotShowIn=GNOME;KDE;
 Encoding=UTF-8
 # vi: encoding=utf-8
