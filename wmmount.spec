@@ -2,13 +2,14 @@ Summary:	Mounts and unmounts file systems
 Summary(pl):	Montuje i odmontowuje systemy plików
 Name:		wmmount
 Version: 	1.0
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Window Managers/Tools
 Group(pl):	X11/Zarz±dcy Okien/Narzêdzia
 Source0:	http://www.geocities.com/SiliconValley/Vista/2471/%{name}.tgz
-Source1:	wmmount.desktop
-Patch:		wmmount-conf.patch
+Source1:	%{name}.desktop
+Patch0:		%{name}-conf.patch
+Patch1:		%{name}-ComplexProgramTargetNoMan.patch
 BuildRequires:	XFree86-devel
 Prereq:		/bin/awk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -29,7 +30,8 @@ na ikonê napêdu.
 
 %prep
 %setup -q -n %{name}
-%patch -p0
+%patch0 -p0
+%patch1 -p1
 
 %build
 
