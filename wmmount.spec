@@ -10,7 +10,6 @@ Source0:	http://www.geocities.com/SiliconValley/Vista/2471/%{name}.tgz
 Source1:	wmmount.desktop
 Patch:		wmmount-conf.patch
 BuildRequires:	XFree86-devel
-BuildRequires:	xpm-devel
 Prereq:		/bin/awk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
