@@ -1,0 +1,22 @@
+diff -urN wmmount.orig/Imakefile wmmount/Imakefile
+--- wmmount.orig/Imakefile	1998-09-05 17:11:18.000000000 +0200
++++ wmmount/Imakefile	2003-09-01 17:58:08.431278600 +0200
+@@ -3,5 +3,6 @@
+ 
+ SRCS = wmmount.cc
+ OBJS = wmmount.o
++CC = g++
+ 
+ ComplexProgramTarget(wmmount)
+diff -urN wmmount.orig/wmmount.cc wmmount/wmmount.cc
+--- wmmount.orig/wmmount.cc	1998-09-05 17:11:18.000000000 +0200
++++ wmmount/wmmount.cc	2003-09-01 17:58:15.088266584 +0200
+@@ -683,7 +683,7 @@
+    }
+ }
+ 
+-void newSystem(char *command, char *path=NULL){
++void newSystem(char *command, char *path){
+    // I am told that using system(3) is bad programming so I use this instead.
+    // I also notice system(3) does odd things to footprint of wmmount in memory.
+ 
