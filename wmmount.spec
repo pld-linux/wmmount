@@ -12,6 +12,7 @@ Patch0:		%{name}-conf.patch
 Patch1:		%{name}-ComplexProgramTargetNoMan.patch
 Patch2:		%{name}-g++.patch
 BuildRequires:	XFree86-devel
+BuildRequires:	libstdc++-devel
 Requires(post):	/bin/awk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -68,7 +69,7 @@ cd %{_datadir}/%{name}
 
 %dir %{_datadir}/%{name}
 %attr(755,root,root) %{_datadir}/%{name}/system.wmmount.awk
-%config %verify(not size mtime md5) %{_datadir}/%{name}/system.wmmount
+%config %verify(not md5 mtime size) %{_datadir}/%{name}/system.wmmount
 
 %{_datadir}/%{name}/icons
 %{_desktopdir}/docklets/wmmount.desktop
