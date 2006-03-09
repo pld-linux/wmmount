@@ -38,7 +38,7 @@ na ikonê napêdu.
 xmkmf
 %{__make} \
 	CXXDEBUGFLAGS="%{rpmcflags}" \
-	CXX=%{__cc}
+	CXX="%{__cc}"
 touch system.wmmount
 
 %install
