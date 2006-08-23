@@ -2,7 +2,7 @@ Summary:	Mounts and unmounts file systems
 Summary(pl):	Montuje i odmontowuje systemy plików
 Name:		wmmount
 Version:	1.0
-Release:	5
+Release:	6
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.geocities.com/SiliconValley/Vista/2471/%{name}.tgz
@@ -11,8 +11,10 @@ Source1:	%{name}.desktop
 Patch0:		%{name}-conf.patch
 Patch1:		%{name}-ComplexProgramTargetNoMan.patch
 Patch2:		%{name}-g++.patch
-BuildRequires:	XFree86-devel
 BuildRequires:	libstdc++-devel
+BuildRequires:	xorg-lib-libXpm-devel
+BuildRequires:	xorg-proto-xextproto-devel
+BuildRequires:	xorg-util-imake
 Requires(post):	/bin/awk
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
