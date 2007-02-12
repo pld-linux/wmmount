@@ -1,5 +1,5 @@
 Summary:	Mounts and unmounts file systems
-Summary(pl):	Montuje i odmontowuje systemy plików
+Summary(pl.UTF-8):   Montuje i odmontowuje systemy plikÃ³w
 Name:		wmmount
 Version:	1.0
 Release:	6
@@ -24,11 +24,11 @@ allows you to automatically mount (and unmount) pre-defined mount
 points and launch your favorite (pre-defined) file manager when you
 double click on the drive icon.
 
-%description -l pl
-Dokowalna aplikacja dla WindowMakera, która pozwala na automatyczne
-montowanie (i odmontowywanie) zdefiniowanych punktów montowania oraz
-na uruchomienie ulubionego zarz±dcy plików przez dwukrotne klikniêcie
-na ikonê napêdu.
+%description -l pl.UTF-8
+Dokowalna aplikacja dla WindowMakera, ktÃ³ra pozwala na automatyczne
+montowanie (i odmontowywanie) zdefiniowanych punktÃ³w montowania oraz
+na uruchomienie ulubionego zarzÄ…dcy plikÃ³w przez dwukrotne klikniÄ™cie
+na ikonÄ™ napÄ™du.
 
 %prep
 %setup -q -n %{name}
