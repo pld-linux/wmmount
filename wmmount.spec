@@ -1,5 +1,5 @@
 Summary:	Mounts and unmounts file systems
-Summary(pl.UTF-8):   Montuje i odmontowuje systemy plików
+Summary(pl.UTF-8):	Montuje i odmontowuje systemy plików
 Name:		wmmount
 Version:	1.0
 Release:	6
