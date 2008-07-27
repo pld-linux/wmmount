@@ -2,7 +2,7 @@ Summary:	Mounts and unmounts file systems
 Summary(pl.UTF-8):	Montuje i odmontowuje systemy plików
 Name:		wmmount
 Version:	1.0
-Release:	6
+Release:	7
 License:	GPL
 Group:		X11/Window Managers/Tools
 Source0:	http://www.geocities.com/SiliconValley/Vista/2471/%{name}.tgz
